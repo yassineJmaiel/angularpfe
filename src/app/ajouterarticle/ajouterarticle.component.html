@@ -1,0 +1,105 @@
+
+<div id="main">
+    <div class="row">
+      <div class="content-wrapper-before gradient-45deg-indigo-purple"></div>
+      <div class="breadcrumbs-dark pb-0 pt-4" id="breadcrumbs-wrapper">
+        <!-- Search for small screen-->
+        <div class="container">
+          <div class="row">
+            
+            <div class="col s10 m6 l6">
+              <h5 class="breadcrumbs-title mt-0 mb-0"><span>Nouvel Article</span></h5>
+              <ol class="breadcrumbs mb-0">
+                <li class="bx bx-home-alt"><a href="index.html">Dashboard</a>
+                </li>
+                <li class="breadcrumb-item"><a href="listeclients.html">STOCK</a>
+                </li>
+                <li class="breadcrumb-item active">Ajouter Article
+                </li>
+              </ol>
+            </div>
+            <div class="col s2 m6 l6"><a class="btn dropdown-settings waves-effect waves-light breadcrumbs-btn right" href="#!" data-target="dropdown1"><i class="material-icons hide-on-med-and-up">settings</i><span class="hide-on-small-onl">Settings</span><i class="material-icons right">arrow_drop_down</i></a>
+              <ul class="dropdown-content" id="dropdown1" tabindex="0">
+                <li tabindex="0"><a class="grey-text text-darken-2" href="user-profile-page.html">Profile<span class="new badge red">2</span></a></li>
+                <li tabindex="0"><a class="grey-text text-darken-2" href="app-contacts.html">Contacts</a></li>
+                <li tabindex="0"><a class="grey-text text-darken-2" href="page-faq.html">FAQ</a></li>
+                <li class="divider" tabindex="-1"></li>
+                <li tabindex="0"><a class="grey-text text-darken-2" href="user-login.html">Logout</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col s12">
+        <div class="container">
+          <div class="seaction">
+  
+  <div class="card">
+  <div class="card-content">
+    <p class="caption mb-0">Ajouter Article.</p>
+  </div>
+  </div>
+  
+  
+        
+        <form (ngSubmit)="insertarticle()">
+          <div class="row">
+            <div class="input-field col m6 s12">
+                <input id="last_name" name="titre" type="text" [(ngModel)]="Article.titre" >
+                <label for="last_name">Titre</label>
+            </div>
+            <div class="input-field col m6 s12">
+              <input id="last_name" name="prixvente" type="text" [(ngModel)]="Article.prixvente">
+              <label for="last_name">Prix de vente par defaut</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col m6 s12">
+              <input id="last_name" name="prixachat" type="text" [(ngModel)]="Article.prixachat">
+              <label for="last_name">prix d'achat par defaut</label>
+            </div>
+            <div class="input-field col m6 s12">
+                <select name="type" [(ngModel)]="Article.type">
+                    <option value="" disabled selected  style="color:#c3c3c3 !important">Type d'article</option>
+                    <option value="produit">Produit</option>
+                    <option value="service">Service</option>
+                </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col m6 s12">
+              <select name="destine" [(ngModel)]="Article.destin">
+                <option value="" disabled selected  style="color:#c3c3c3 !important">Cet article est destiné A</option>
+                <option value="vente">Vente</option>
+                <option value="achat">Achat</option>
+                <option value="les deux">Les deux</option>
+              </select>
+              
+                
+              </div>
+              <div class="row">
+                <div class="input-field col m6 s12">
+                  <input id="EMAIL" name="description" type="email" [(ngModel)]="Article.description">
+                  <label for="EMAIL">Description</label>
+                </div>
+              
+          </div>
+          
+          </div>
+          <div class="row">
+            <div class="input-field col m6 s12">
+              <input id="tel" name="reference" type="text" [(ngModel)]="Article.reference">
+                  <label for="tel">Référence</label>
+            </div>
+            <div class="input-field col m6 s12">
+              <select name="taxe" [(ngModel)]="Article.taxe" >
+                <option>19%</option>
+                </select>
+              <label for="SITE">Taxe</label>
+            </div>
+          </div>
+          <div class="btn_form_pfe">
+            <div> <button type="submit"  class="red btn btn-reset" > Annuler <i class="material-icons left">clear</i></button> <button type="submit"  class="btn waves-effect waves-light " > Enregistrer <i class="material-icons right">send</i></button></div>
+          </div> 
+        </form>
+         

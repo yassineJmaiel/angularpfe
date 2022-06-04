@@ -1,0 +1,88 @@
+<div id="main">
+  <div class="row">
+    <div class="content-wrapper-before gradient-45deg-indigo-purple"></div>
+    <div class="col s12">
+      <div class="container">
+        <!-- invoice list -->
+<section class="invoice-list-wrapper section">
+<!-- create invoice button-->
+<!-- Options and filter dropdown button-->
+<
+<!-- create invoice button-->
+<div class="invoice-create-btn" style="padding: 1%" >
+<a href="bondelivraison.html" class="btn waves-effect waves-light invoice-create border-round z-depth-4">
+  <i class="material-icons">add</i>
+  <span class="hide-on-small-only">Nouvelle Facture</span>
+</a>
+</div>
+
+<div class="responsive-table">
+<table class="table invoice-data-table white border-radius-4 pt-1">
+  <thead>
+    <tr>
+      <!-- data table responsive icons -->
+      <th></th>
+      <!-- data table checkbox -->
+      <th></th>
+      <th>
+        <span>Num</span>
+      </th>
+      <th>CLIENT</th>
+      <th>DATE</th>
+      <th>ECHEANCE</th>
+      <th>STATU</th>
+      
+      <th>TOTAL TTC</th>
+      <th>ACTION</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor= "let facture of facture">
+      <td></td>
+      <td></td>
+      <td>
+        {{facture.num}}
+      </td>
+      <td>{{facture.client}}</td>
+      <td>
+          {{facture.date}}
+        </td>
+      <td>{{facture.echeance}}</td>
+      
+      <td>
+        <span class="chip lighten-5 red red-text">UNPAID</span>
+      </td>
+      <td>
+          <span class="">$459.30</span>
+        </td>
+      <td>
+        <div class="invoice-action">
+          <a href="app-invoice-view.html" class="invoice-action-view mr-4">
+            <i class="material-icons">remove_red_eye</i>
+          </a>
+          <a href="app-invoice-edit.html" class="invoice-action-edit">
+            <i class="material-icons">edit</i>
+          </a>
+        </div>
+      </td>
+      <td></td>
+      <a type="button" class="btn btn-warning" routerLink="/modifierfacture/{{facture.id}}">Modifier</a>
+    </tr>
+    
+    
+  </tbody>
+</table>
+</div>
+</section><!-- START RIGHT SIDEBAR NAV -->
+
+<!-- END RIGHT SIDEBAR NAV -->
+      </div>
+      <div class="content-overlay"></div>
+    </div>
+  </div>
+</div>
+
+
+

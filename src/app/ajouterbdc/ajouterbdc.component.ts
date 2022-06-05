@@ -55,7 +55,7 @@ export class AjouterbdcComponent implements OnInit {
         Swal.fire({
           icon: 'error',
           title: 'Oops...',
-          text: 'Something went wrong!',
+          text: 'il ya une erreur!',
          
         })
       }

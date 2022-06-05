@@ -12,7 +12,7 @@ export class DatafournisseurService {
     
   }
   deletefournisseur(id:any){
-    return this.httpclient.delete('http://127.0.0.1:8000/api/deletefournisseur/'+id)
+    return this.httpclient.delete('http://127.0.0.1:8000/api/deleteFournisseur/'+id)
   }
   insertData(data:any){
     return this.httpclient.post('http://127.0.0.1:8000/api/addFournisseur',data);
